@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>REST Countries API</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="title">
+			<h2>Where in the world?</h2>
+			<div class="mode">
+				<i class="fa-regular fa-moon"></i>
+				<p>Dark Mode</p>
+			</div>
+		</div>
+
+		<div class="search-container">
+			<div class="input-bar">
+				<i class="fa-solid fa-magnifying-glass search-icon"></i>
+				<input
+					type="text"
+					placeholder="Search for a country..."
+					class="search-input" />
+			</div>
+			<div class="filter">
+				<label for="region" class="filter-label">Filter by Region </label>
+				<select name="region" id="region">
+					<option value="" disabled selected hidden></option>
+					<option value="Africa">Africa</option>
+					<option value="Americas">Americas</option>
+					<option value="Asia">Asia</option>
+					<option value="Europe">Europe</option>
+					<option value="Oceania">Oceania</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="section-container">
+			<!-- <div class="section">
+				<div>
+					<img src="/1280px-Flag_of_Germany.svg.png" alt="" />
+				</div>
+				<div class="details">
+					<p>Germany</p>
+					<p class="country-details"><span>Population: </span>81,770,900</p>
+					<p class="country-details"><span>Region: </span>Europe</p>
+					<p class="country-details"><span>Capital: </span>Berlin</p>
+				</div>
+			</div> -->
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

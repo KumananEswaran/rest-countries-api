@@ -1,0 +1,309 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Nunito Sans', serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+body {
+	background-color: #f2f2f2;
+}
+
+.title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.4rem 5rem 1.5rem 5rem;
+	background-color: #ffffff;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.mode {
+	display: flex;
+	align-items: center;
+	gap: 0.63rem;
+	font-weight: 600;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.title h2 {
+	font-weight: 800;
+	font-size: 1.5rem;
+}
+
+.search-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3rem 5rem 1.5rem 5rem;
+	position: relative;
+}
+
+.search-input {
+	padding-left: 4rem;
+	border: none;
+	border-radius: 4px;
+	font-size: 1rem;
+	width: 25rem;
+	height: 3.5rem;
+	font-weight: 400;
+	font-size: 0.875rem;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.search-icon {
+	position: absolute;
+	left: 106px;
+	top: 70px;
+	color: #888;
+}
+
+.filter {
+	position: relative;
+	display: inline-block;
+	width: 12rem;
+}
+
+.filter-label {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	transform: translateY(-50%);
+	pointer-events: none;
+	opacity: 1;
+	padding-left: 0.625rem;
+	font-weight: 400;
+	font-size: 0.875rem;
+}
+
+#region {
+	padding: 0.625rem;
+	font-size: 0.875rem;
+}
+
+.filter-label img {
+	padding-left: 2.5rem;
+}
+
+select {
+	width: 100%;
+	border: none;
+	border-radius: 4px;
+	height: 3.5rem;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.section-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 6.25rem;
+	padding: 3rem 5rem 1.5rem 5rem;
+}
+
+.section {
+	background-color: #ffffff;
+}
+
+.details {
+	padding: 1rem;
+}
+
+.details P:nth-of-type(1) {
+	padding-bottom: 1rem;
+	font-weight: 800;
+	font-size: 1.125rem;
+}
+
+.country-details {
+	padding-bottom: 0.4rem;
+	font-size: 0.875rem;
+}
+
+.country-details span {
+	font-weight: 700;
+}
+
+img {
+	width: 16.5rem;
+	height: 10rem;
+	border-radius: 10px;
+}
+
+.back {
+	display: inline-flex;
+	align-items: center;
+	margin-left: 7.5rem;
+	margin-top: 4.375rem;
+	border: none;
+	cursor: pointer;
+	padding: 0.3rem 1.5rem;
+	border-radius: 4px;
+}
+
+.arrow {
+	margin-right: 0.5rem;
+}
+
+.country {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding-left: 5rem;
+	padding-right: 6rem;
+	justify-content: space-between;
+	margin-top: 3.75rem;
+}
+
+.country-info {
+	display: flex;
+	gap: clamp(1rem, 5vw, 5rem);
+}
+
+.country-image img {
+	width: 35rem;
+	height: 25.06rem;
+}
+
+.country-name p {
+	font-weight: 800;
+	font-size: 2rem;
+	padding-bottom: 2rem;
+}
+
+.country-info-1 span,
+.country-info-2 span,
+.border p {
+	font-weight: 700;
+}
+
+.country-info-1 p,
+.country-info-2 p {
+	padding-bottom: 1rem;
+}
+
+.border {
+	display: flex;
+	margin-top: 3rem;
+}
+
+.border-countries {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0.5rem;
+}
+
+.border-countries button {
+	width: 100%;
+	height: 1.75rem;
+	background-color: #ffffff;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+	border: none;
+	margin-left: 0.5rem;
+	cursor: pointer;
+	text-wrap: nowrap;
+}
+
+.hide {
+	display: none;
+}
+
+body.dark-mode,
+body.dark-mode .country-container {
+	background-color: #202c36;
+	color: #ffffff;
+}
+
+body.dark-mode .section,
+body.dark-mode .title,
+body.dark-mode .search-input,
+body.dark-mode #region,
+body.dark-mode .back,
+body.dark-mode .border-countries button {
+	background-color: #2b3844;
+	color: #ffffff;
+}
+
+body.dark-mode .details {
+	color: #ffffff;
+}
+
+@media (max-width: 768px) {
+	.section-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.section {
+		width: 16.5rem;
+		margin: 0 auto;
+	}
+
+	.search-container {
+		flex-direction: column;
+		padding-left: 10px;
+		align-items: flex-start;
+	}
+
+	.input-bar {
+		width: 100%;
+	}
+
+	.filter {
+		margin-top: 20px;
+		width: 50%;
+		padding-left: 0;
+	}
+
+	.search-input {
+		width: 100%;
+	}
+
+	.search-icon {
+		left: 40px;
+	}
+
+	.title {
+		padding-left: 10px;
+		padding-right: 20px;
+	}
+
+	.back {
+		margin-left: 10px;
+	}
+
+	.country,
+	.country-info,
+	.border {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.country {
+		padding-left: 10%;
+	}
+
+	.border-countries {
+		grid-template-columns: repeat(4, 1fr);
+		margin-top: 20px;
+	}
+
+	.border-countries button {
+		margin-left: 0;
+	}
+
+	.country-image img {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 600px) {
+	.country-image img {
+		width: 400px;
+		height: 300px;
+	}
+
+	.title {
+		padding-right: 0;
+	}
+}
